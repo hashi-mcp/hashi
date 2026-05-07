@@ -25,8 +25,7 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
+        # Reads pnpm version from `packageManager` in package.json — no need to pin here.
 
       - name: Setup Node ${{ matrix.node }}
         uses: actions/setup-node@v4
