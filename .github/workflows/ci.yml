@@ -36,6 +36,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # Build first so internal workspace deps expose their `dist/*.d.ts`
+      # to subsequent typecheck and test runs (TS resolves @hashi-mcp/core
+      # via packages/core/package.json `types` -> dist).
+      - name: Build
+        run: pnpm build
+
       - name: Lint
         run: pnpm lint
 
@@ -44,6 +50,3 @@ jobs:
 
       - name: Test
         run: pnpm test
-
-      - name: Build
-        run: pnpm build
