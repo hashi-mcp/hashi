@@ -1,0 +1,45 @@
+{
+  "name": "@hashi-mcp/core",
+  "version": "0.0.1",
+  "description": "Hashi runtime — Bridge, Tool, Transport, Lifecycle. The foundation every Hashi package builds on.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "anthropic",
+    "desktop",
+    "bridge",
+    "hashi"
+  ],
+  "license": "MIT",
+  "author": "Alexandre Parena <contact.parena@gmail.com>",
+  "homepage": "https://github.com/hashi-mcp/hashi/tree/main/packages/core",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashi-mcp/hashi.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/hashi-mcp/hashi/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

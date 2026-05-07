@@ -1,0 +1,10 @@
+# Force LF line endings everywhere in this repo, regardless of platform.
+# Avoids spurious CRLF/LF noise on Windows checkouts.
+* text=auto eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.pdf binary

@@ -1,0 +1,44 @@
+{
+  "name": "@hashi-mcp/server",
+  "version": "0.0.1",
+  "description": "MCP server for Hashi bridges. Wraps @modelcontextprotocol/sdk and exposes one or more bridges as a single MCP server (stdio).",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": ["mcp", "claude", "anthropic", "model-context-protocol", "desktop", "hashi"],
+  "license": "MIT",
+  "author": "Alexandre Parena <contact.parena@gmail.com>",
+  "homepage": "https://github.com/hashi-mcp/hashi/tree/main/packages/server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashi-mcp/hashi.git",
+    "directory": "packages/server"
+  },
+  "bugs": {
+    "url": "https://github.com/hashi-mcp/hashi/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@hashi-mcp/core": "workspace:^",
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

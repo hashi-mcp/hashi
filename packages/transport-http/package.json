@@ -1,0 +1,43 @@
+{
+  "name": "@hashi-mcp/transport-http",
+  "version": "0.0.1",
+  "description": "HTTP/JSON-RPC localhost transport for Hashi bridges. Includes bearer auth and configurable timeouts.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": ["mcp", "claude", "anthropic", "desktop", "http", "json-rpc", "hashi"],
+  "license": "MIT",
+  "author": "Alexandre Parena <contact.parena@gmail.com>",
+  "homepage": "https://github.com/hashi-mcp/hashi/tree/main/packages/transport-http",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashi-mcp/hashi.git",
+    "directory": "packages/transport-http"
+  },
+  "bugs": {
+    "url": "https://github.com/hashi-mcp/hashi/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@hashi-mcp/core": "workspace:^"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
