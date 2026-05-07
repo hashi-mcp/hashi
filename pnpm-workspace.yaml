@@ -1,0 +1,6 @@
+packages:
+  - 'packages/*'
+  # Reserved for future expansion:
+  # - 'sdks/*'
+  # - 'examples/*'
+  # - 'studio'
