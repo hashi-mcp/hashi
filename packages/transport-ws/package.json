@@ -1,0 +1,47 @@
+{
+  "name": "@hashi-mcp/transport-ws",
+  "version": "0.0.1",
+  "description": "WebSocket/JSON-RPC localhost transport for Hashi bridges. Supports push events via subscribe, bearer auth, and token rotation.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": ["mcp", "claude", "anthropic", "desktop", "websocket", "json-rpc", "hashi"],
+  "license": "MIT",
+  "author": "Alexandre Parena <contact.parena@gmail.com>",
+  "homepage": "https://github.com/hashi-mcp/hashi/tree/main/packages/transport-ws",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashi-mcp/hashi.git",
+    "directory": "packages/transport-ws"
+  },
+  "bugs": {
+    "url": "https://github.com/hashi-mcp/hashi/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@hashi-mcp/core": "workspace:^",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.13"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
